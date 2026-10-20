@@ -127,10 +127,6 @@ figcaption { margin-top: 0.6rem; }
 
 /* The one memorable element: the research figure, wider than the text */
 figure.wide { margin-top: 2rem; margin-bottom: 1.75rem; }
-@media (min-width: 64rem) {
-  figure.wide { margin-left: calc((var(--measure) - var(--wide)) / 2); margin-right: calc((var(--measure) - var(--wide)) / 2); }
-  figure.wide figcaption { max-width: var(--measure); margin-left: auto; margin-right: auto; }
-}
 .finding {
   display: block;
   font-size: clamp(1.4rem, 4.2vw, 2rem);
