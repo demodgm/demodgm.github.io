@@ -34,6 +34,7 @@
   --accent: #5B3DB5;
   --rule: #CDD3DA;
   --tint: #E6E1F7;
+  --chart: #5B3DB5;
   --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
   --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
   --measure: 42.5rem;   /* 680px text column */
@@ -48,6 +49,7 @@
     --accent: #B4A3FF;
     --rule: #2A313A;
     --tint: #241F3D;
+    --chart: #8F7BEA;
   }
 }
 
@@ -179,3 +181,20 @@ footer p { font-size: 0.95rem; color: var(--muted); margin: 0; }
 /* Paper figure: white plate so the chart stays legible in dark mode; tap opens full size */
 .figlink { display: block; background: #FFFFFF; border-radius: 3px; padding: 0.5rem; }
 .figlink img { border-radius: 0; }
+
+/* Installs chart: static inline SVG, one series, no legend needed */
+.chart { display: block; width: 100%; height: auto; overflow: visible; }
+.chart .grid { stroke: var(--rule); stroke-width: 1; }
+.chart .tick { font-family: var(--mono); font-size: 13px; fill: var(--muted); font-variant-numeric: tabular-nums; }
+.chart .area { fill: var(--chart); opacity: 0.1; }
+.chart .line { fill: none; stroke: var(--chart); stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+.chart .dot { fill: var(--chart); stroke: var(--bg); stroke-width: 2; }
+.chart .hit { fill: transparent; }
+.chart .pt:hover .dot { r: 6; }
+.chart .endlabel { font-family: var(--serif); font-size: 18px; font-weight: 600; fill: var(--ink); }
+@media (max-width: 40rem) {
+  .chart .tick { font-size: 26px; }
+  .chart .endlabel { font-size: 32px; }
+  .chart .dot { r: 6; }
+}
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
