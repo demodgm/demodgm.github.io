@@ -197,4 +197,5 @@ footer p { font-size: 0.95rem; color: var(--muted); margin: 0; }
   .chart .endlabel { font-size: 32px; }
   .chart .dot { r: 6; }
 }
+.chart-title { font-weight: 600; font-size: 1.05rem; line-height: 1.3; margin: 0 0 0.6rem; }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
